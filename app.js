@@ -23,18 +23,18 @@ document.getElementById("complaintForm").addEventListener("submit", function(eve
     let userEmail = document.getElementById("userEmail").value.trim();
     let complaintDetail = document.getElementById("complaintDetail").value.trim();
     
-    function getQueryParam(param) {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(param);
-    }
-    
-    // Auto-fill the Sensor ID field from the QR Code URL
-    document.addEventListener("DOMContentLoaded", function() {
-        let sensorId = getQueryParam("sensorId");
-        if (sensorId) {
-            document.getElementById("sensorId").value = sensorId;
+ function getQueryParam(param) {
+            let urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
         }
-    });
+
+        // Auto-fill the Sensor ID from the URL parameter
+        document.addEventListener("DOMContentLoaded", function () {
+            let sensorId = getQueryParam("sensorId");
+            if (sensorId) {
+                document.getElementById("sensorId").value = sensorId;
+            }
+        });
     
 
     if (sensorId === "" || userName === "" || userContact === "" || userEmail === "" || complaintDetail === "") {

@@ -22,6 +22,7 @@ document.getElementById("complaintForm").addEventListener("submit", function(eve
     let userContact = document.getElementById("userContact").value.trim();
     let userEmail = document.getElementById("userEmail").value.trim();
     let complaintDetail = document.getElementById("complaintDetail").value.trim();
+    
     function getQueryParam(param) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(param);

@@ -17,7 +17,7 @@ document.getElementById("complaintForm").addEventListener("submit", function(eve
     event.preventDefault();
 
     // Get input values
-    let sensorId = document.getElementById("sensorId").value.trim();
+    
     let userName = document.getElementById("userName").value.trim();
     let userContact = document.getElementById("userContact").value.trim();
     let userEmail = document.getElementById("userEmail").value.trim();
